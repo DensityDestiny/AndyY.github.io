@@ -1,0 +1,361 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+html {
+    scroll-behavior: smooth !important;
+}
+body {
+    background-color: rgb(0, 0, 0);
+}
+.banner {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(3px);
+    z-index: 100;
+}
+.logo {
+    width: 120px;
+    transition: 0.1s ease;
+}
+.logo:hover {
+    transform: scale(1.1);
+}
+.navbar {
+    width: 90%;
+    margin: auto;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 50px;
+}
+.navbar ul li a {
+    font-weight: 800;
+    text-decoration: none;
+    color: white;
+    transition: 0.2s ease;
+}
+.navbar ul li a:hover {
+    color: red;
+}
+.navbar ul li a::after{
+    display: block;
+    content: '';
+    transform: scaleX(0);
+    border-bottom: 3px solid red;
+    transition: 0.2s ease;
+}
+.navbar ul li a:hover::after{
+    transform: scaleX(1);
+}
+.home {
+    min-height: 85vh;
+    padding-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+.home_content {
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    text-align: right; 
+}
+.home_content h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.5;
+}
+.home_content h3 {
+    width: 500px;
+    font-weight: 800;
+    line-height: 1.5;
+}
+.portrait {
+    width: 500px;
+    border-radius: 50%;
+    box-shadow: 0 0 45px rgb(52, 52, 52);
+    transform: scale(1, 1);
+    transition: 0.2s ease;
+}
+.portrait:hover {
+    box-shadow: 0 0 50px rgb(52, 52, 52);
+    transform:scale(1.05, 1.05);
+}
+.about {
+    min-height: 90vh;
+    padding-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about_img div img {
+    box-shadow: 0 0 45px rgb(251, 255, 0);
+    border-radius: 20%;
+}
+.ap1 {
+    float: right;
+    width: 400px;
+    transform: rotate(2deg) translate(-60px, 20px);
+}
+.ap2 {
+    float: right;
+    width: 200px;
+    transform: rotate(-10deg) translateX(-50px);
+}
+.ap3 {
+    float: right;
+    width: 200px;
+    transform: rotate(4deg) translateX(-50px);
+}
+.ap4 {
+    float: right;
+    width: 180px;
+    transform: rotate(-10deg) translate(15px, 90px);
+}
+.ap5 {
+    float: right;
+    width: 180px;
+    transform: rotate(-5deg) translate(20px, 45px);
+}
+.ap6 {
+    float: right;
+    width: 180px;
+    transform: rotate(20deg) translateX(20px);
+}
+.about_content {
+    text-align: center;
+    color: white;
+    line-height: 1.5;
+}
+.about h1 {
+    font-size: 4rem;
+}
+.projects {
+    min-height: 250vh;
+    padding-top: 6rem;
+}
+.project_contents {
+    text-align: center;
+    color: white;
+    line-height: 1.5;
+}
+.project_contents h1{
+    font-size: 4rem;
+}
+.project_contents h2{
+    font-size: 1rem;
+}
+.personal_logo {
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    padding-bottom: 1rem;
+}
+.godot_projects div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    padding-bottom: 2rem;
+}
+.project_container a img{
+    border-radius: 5%;
+    width: 600px;
+    box-shadow: 0 0 45px rgb(0, 13, 255);
+}
+.project_container div{
+    pointer-events: none; 
+    position: absolute;
+    display: block;
+    color: rgb(255, 255, 255);
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+    z-index: 1;
+    line-height: 2;
+}
+.project_container .title {
+    text-align: center;
+    font-size: 3rem;
+}
+.project_container .text {
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+}
+.project_container {
+    transform:scale(1, 1);
+    transition-duration: 0.3s;
+}
+.project_container:hover{
+    transform:scale(1.05, 1.05);
+}
+.python_projects .content {
+    font-size: 4rem;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-bottom: 3rem;
+}
+.tea_project {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: left;
+    gap: 10rem;
+    padding-bottom: 1rem;
+}
+.pygame_project {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: right; 
+    gap: 10rem;
+    padding-bottom: 1rem;
+}
+.vid {
+    width: 500px;
+    border-radius: 5%;
+    box-shadow: 0 0 20px rgb(0, 255, 72);
+    transition-duration: 0.2s;
+}
+.vid:hover {
+    box-shadow: 0 0 60px rgb(0, 255, 72);
+}
+.py_contents {
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+}
+.py_contents h1{
+    font-size: 3rem;
+}
+.contacts {
+    min-height: 80vh;
+    padding-top: 2rem;
+}
+.contact_contents {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    color: white;
+    line-height: 2;
+}
+.contact_contents img {
+    opacity: 0.8;
+}
+.contacts button {
+    margin: 0 auto;
+    display: block;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+.form h3 {
+    font-size: 3rem;
+}
+.contact_input {
+    width: 400px;
+    height: 50px;
+    border: 2px solid rgb(0, 191, 255);
+    padding-left: 25px;
+    font-weight: 700;
+    border-radius: 50px;
+    background-color: rgb(25, 25, 25);
+    color: white;
+}
+.form textarea {
+    height: 140px;
+    padding-top: 15px;
+    border-radius: 20px;
+    color: white;
+}
+.form button {
+    display: flex;
+    align-items: center;
+    font-weight: 900;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    box-shadow: 0 0 20px rgb(0, 13, 255);
+    border-radius: 15px;
+    background: linear-gradient(270deg, rgb(102, 0, 255), blue);
+    transition: 0.05s ease;
+}
+.form button:hover {
+    box-shadow: 0 0 30px rgb(0, 13, 255), 0 0 30px rgb(0, 13, 255);
+}
+@media (max-width:900px) {
+    .home {
+        gap: 3rem;
+    }
+    .portrait {
+        width: 300px;
+    }
+    .about_content h2{
+        font-size: 1rem;
+    }
+    .contact_input {
+        width: 80vw;
+    }
+    .contact_contents img {
+        display: none;
+    } 
+    .godot_projects div{
+        gap: 2rem;
+        padding-bottom: 1rem;
+    }
+    .project_container .title {
+        text-align: center;
+        font-size: 35px;
+    }
+    .project_container .text {
+        font-size: 22px;
+    }
+    .project_container a img {
+        width: 400px;
+    }
+    .tea_project {
+        width: 90%;
+        gap: 1rem;
+        font-size: 15px;
+    }
+    .pygame_project {
+        width: 90%;
+        gap: 1rem;
+        font-size: 15px;
+    }
+    .py_contents h1 {
+        font-size: 2rem;
+    }
+    .vid {
+        width: 350px;
+    }
+    .projects {
+        min-height: 200vh;
+    }
+}
